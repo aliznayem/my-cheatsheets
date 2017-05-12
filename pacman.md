@@ -1,3 +1,5 @@
+Pacman is the package manager used by Arch Linux.
+
 ## Some Important Options ##
 
 #### Search for a Package ####
