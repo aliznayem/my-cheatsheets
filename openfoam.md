@@ -1,8 +1,8 @@
  Installed openfoam4.1 form https://openfoam.org/download/4-1-linux/
  
- ## Installation flow for Arch linux ##
+ ## Installation Procedure for Arch Linux ##
  
- #### Install docker ####
+ #### Install Docker ####
  Docker is a lightweight package container. Container is kind of Virtual Machine but cantains only libraries and settings required to make the software work are needed. 
  
  ```
@@ -11,21 +11,21 @@
  pacman -S docker (install)
  ```
  
- #### Enable docker service ####
+ #### Enable Docker Service ####
  ```
  sudo systemctl enable docker.service (to start service at startup)
  
  sudo systemctl start docker
  ```
  
- #### Install openfoam ####
+ #### Install Openfoam ####
  ```
  sh -c "wget http://dl.openfoam.org/docker/openfoam4-linux -O /usr/bin/openfoam4-linux"
  
  chmod 755 /usr/bin/openfoam4-linux
  ```
  
- #### Launching openfoam ####
+ #### Launching Openfoam ####
  ```
  mkdir -p $HOME/OpenFOAM/${USER}-4.1
  
@@ -36,7 +36,7 @@
  
  First run takes several time to download bunch of data (around 600-700MB)
  
- #### Testing with a sample ####
+ #### Testing with a Sample ####
  ```
  mkdir -p $FOAM_RUN
  
@@ -53,7 +53,7 @@
  paraFoam
  ```
  
- ## Problems faced ##
+ ## Problems Faced ##
  Protocol not defined
  
  Cannot connect to X server:0.0
