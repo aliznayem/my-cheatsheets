@@ -26,6 +26,8 @@
  
  openfoam4-linux
  
+ First run takes several time to download bunch of data (around 600-700MB)
+ 
  # Testing with a sample
  mkdir -p $FOAM_RUN
  
@@ -46,6 +48,6 @@
  
  Cannot connect to X server:0.0
  
- # Solved by
+ # Solved by running
  xhost +local:root 
 
