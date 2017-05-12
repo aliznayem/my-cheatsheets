@@ -24,10 +24,15 @@ passwd arch
 ```
 
 ## Install Package ##
+#### Change User ####
+```
+su username
+```
 #### Acquire Build Files ####
 There are several methods to acquire build files. Can be downloaded directly or cloning git repository. 
-Clone git repository:
+Clone git repository in a local directory:
 ```
+cd ~/example
 git clone https://aur.archlinux.org/package_name.git
 ```
 Or download from web browser and extract:
