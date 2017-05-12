@@ -30,12 +30,12 @@ Clone git repository:
 ```
 git clone https://aur.archlinux.org/package_name.git
 ```
-Download from web browser and extract:
+Or download from web browser and extract:
 ```
 tar -xvf package_name.tar.gz
 ```
 #### Build and Install Packages ####
-cd to PKGBUILD containing directory. Should carefully check PKGBUILD or .install file if containing any malicious command.
+cd to `PKGBUILD` containing directory. Should carefully check `PKGBUILD` or `.install` file if containing any malicious command.
 ```
 cd package_name
 vim PKGBUILD
