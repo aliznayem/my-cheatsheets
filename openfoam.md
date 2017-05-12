@@ -1,6 +1,6 @@
  Installed openfoam4.1 form https://openfoam.org/download/4-1-linux/
  
- # Installation flow for Arch linux
+ ## Installation flow for Arch linux ##
  
  # Install docker
  Docker is a lightweight package container. Container is kind of Virtual Machine but cantains only libraries and settings required to make the software work are needed. 
