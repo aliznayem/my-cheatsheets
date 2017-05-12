@@ -1,5 +1,5 @@
 ## Some Important Options ##
 **Search for a Package:**
-`pacman -Ss <string>`
+```pacman -Ss <string>```
 **Install a Package:**
-`pacman -S <package name>`
+```pacman -S <package name>```
