@@ -63,7 +63,7 @@ To remove a package, which is required by another package, without removing the 
 pacman -Rdd package_name
 ```
 
-Pacman saves important configuration files when removing certain applications and names them with the extension: .pacsave. To prevent the creation of these backup files use the `-n` option:
+Pacman saves important configuration files when removing certain applications and names them with the extension `.pacsave`. To prevent the creation of these backup files use the `-n` option:
 
 ```
 pacman -Rn package_name
