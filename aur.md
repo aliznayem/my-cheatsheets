@@ -22,3 +22,36 @@ passwd username
 useradd -m -G wheel -s /bin/bash arch
 passwd arch
 ```
+
+## Install Package ##
+#### Acquire Build Files ####
+There are several methods to acquire build files. Can be downloaded directly or cloning git repository. 
+Clone git repository:
+```
+git clone https://aur.archlinux.org/package_name.git
+```
+Download from web browser and extract:
+```
+tar -xvf package_name.tar.gz
+```
+#### Build and Install Packages ####
+cd to PKGBUILD containing directory. Should carefully check PKGBUILD or .install file if containing any malicious command.
+```
+cd package_name
+vim PKGBUILD
+vim package_name.install
+```
+Make the package. After manually confirming the integrity of the files, run makepkg as a normal user: 
+```
+makepkg -si
+```
+`-s/--syncdeps` automatically resolves and install any dependencies with pacman before building. If the package depends on other AUR packages, you will need to manually install them first.
+
+`-i/--install` installs the package if it is built successfully. Alternatively the built package can be installed with `pacman -U package.pkg.tar.xz`.
+
+
+Other useful flags:
+
+`-r/--rmdeps` removes build-time dependencies after the build, as they are no longer needed. However these dependencies may need to be reinstalled the next time the package is updated.
+
+`-c/--clean` cleans up temporary build files after the build, as they are no longer needed. These files are usually needed only when debugging the build process.
