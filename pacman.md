@@ -23,7 +23,7 @@ System upgrade:
 
 ```pacman -Su```
 
-Do foresaid two in one command:
+Do foresaid both tasks in one command:
 
 ```pacman -Syu```
 
