@@ -49,5 +49,5 @@
  Cannot connect to X server:0.0
  
  #### Solved by running ####
- '''xhost +local:root''' 
+ ```xhost +local:root``` 
 
