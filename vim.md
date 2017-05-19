@@ -5,4 +5,5 @@
 4. Shift + i (capital I)
 5. insert the text you want, i.e. '% '
 6. press Esc.
+
 [http://stackoverflow.com/questions/1676632/whats-a-quick-way-to-comment-uncomment-lines-in-vim]
