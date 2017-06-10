@@ -17,3 +17,13 @@ Add:
 ````
 syntax on
 ````
+
+#### Set Tab 4 Spaces ####
+````
+cd ~
+vim .vimrc
+````
+Add:
+````
+set tabstop=4
+````
