@@ -1,6 +1,5 @@
 
-From https://raspberrypi.stackexchange.com/questions/69169/how-to-install-opencv-on-raspberry-pi-3-in-raspbian-jessie
-Technico.top
+Source: https://raspberrypi.stackexchange.com/questions/69169/how-to-install-opencv-on-raspberry-pi-3-in-raspbian-jessie Technico.top
 
 ## Install Opencv in Raspbian ##
 #### generic stuff ####
