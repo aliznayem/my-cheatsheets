@@ -1,2 +1,2 @@
 ## your_cheatsheets ##
-Handy Informations
+Handy Informations.
