@@ -71,9 +71,9 @@ airodump-ng wlan0 (wlan0: monitor interface)
 * ESSID: Name of the network
 ### WiFi bands
 #### Features
-* Decides the frequency range that can be used
-* Determines the channels that can be used
-* Clients need to support bands to communicate with the router
+* Decides the frequency range that can be used.
+* Determines the channels that can be used.
+* Clients need to support bands to communicate with the router.
 #### Most common WiFi bands
 * a: 5GHz
 * b, g: 2.4GHz
@@ -91,21 +91,36 @@ airodump-ng --bssid [BSSID] --channel [CH] --write [filename] wlan0
 Files will be created with .csv, .netxml, .cap extensions. Where .cap is capture file. Can be opened with wireshark. .cap file cantains captured packets.
 ### Deauthentication attack
 Disconnect any client from any network.
-* Works on encrypted networks (WEP, WPA and WPA2)
-* No need to know the network key
-* No need to connect to the network
+* Works on encrypted networks (WEP, WPA and WPA2).
+* No need to know the network key.
+* No need to connect to the network.
 #### Run
 ```
 iwconfig wlan0 channel [CH] (set channel number same as router)
 aireplay-ng --deauth [#DeauthPackets] -a [NetworkMAC] -c [TargetMAC] wlan0
 ```
 Where
+* #DeauthPackets: Number of deauthentication packets. 0 will represent infinite number of deauth attacks.
+* NetworkMAC: Router MAC address
+* TargetMAC: Client MAC address
 
-#DeauthPackets: Number of deauthentication packets. 0 will represent infinite number of deauth attacks.
-
-NetworkMAC: Router MAC address
-
-TargetMAC: Client MAC address
+## Gaining access (WEP/WPA/WPA2 cracking)
+### WEP cracking
+#### Features
+* Wired Equivalent Privacy
+* Old encryption
+* Uses an algorithm called RC4.
+* Still used in some networks.
+* Can be cracked easily.
+#### Process
+* Client encrypts data using a key.
+* Encrypted packet sent in the air.
+* Router decrypts packet using the key.
+#### Encryption method
+* Each packet is encrypted using a unique key stream.
+* Random initialization vector (IV) is used to generate the key streams.
+* The initialization vector is only 24 bits.
+* IV + key (password) = key stream
 
 
 
