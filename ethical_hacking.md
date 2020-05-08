@@ -1,5 +1,3 @@
-****
-
 ## Contents
 * [Lab setup](#lab-setup)
 * [Network hacking basics](#network-hacking-basics)
