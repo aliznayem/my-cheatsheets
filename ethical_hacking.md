@@ -1,5 +1,11 @@
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
 
+## Contents
+* [Lab setup](#lab-setup)
+* [Network hacking basics](#network-hacking-basics)
+* [Pre-connection attacks](#pre-connection-attacks)
+* [Gaining access (WEP/WPA/WPA2 cracking)](#gaining-access-wepwpawpa2-cracking)
+
 ## Lab setup
 * Install kali linux
 * Buy an external USB WiFi dongle. Normally internal WiFi adapters do not support monitor mode, packet injections. [Setup USB WiFi adapter on virtual box](https://www.youtube.com/watch?v=RiTICcLH4kU)
@@ -106,7 +112,7 @@ Where
 * NetworkMAC: Router MAC address
 * TargetMAC: Client MAC address
 
-## Gaining access (WEP/WPA/WPA2 cracking)
+## Gaining access (WEP/WPA/WPA2 cracking) <a name="gaining-access-wepwpawpa2-cracking"></a>
 ### WEP cracking
 #### Features
 * Wired Equivalent Privacy
