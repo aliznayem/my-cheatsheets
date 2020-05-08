@@ -17,7 +17,7 @@
 ****
 
 ## Lab setup
-* Install kali linux
+* Install kali linux.
 * Buy an external USB WiFi dongle. Normally internal WiFi adapters do not support monitor mode, packet injections. [Setup USB WiFi adapter on virtual box](https://www.youtube.com/watch?v=RiTICcLH4kU)
 
 ## Network hacking basics
