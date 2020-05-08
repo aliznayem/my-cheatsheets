@@ -3,8 +3,16 @@ Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.co
 ## Contents
 * [Lab setup](#lab-setup)
 * [Network hacking basics](#network-hacking-basics)
+  * [Attack types](#attack-types)
+  * [MAC (Media Access Control) Address](#mac-address)
+  * [Monitor mode](#monitor-mode)
 * [Pre-connection attacks](#pre-connection-attacks)
+  * [Packet sniffing](#packet-sniffing)
+  * [WiFi bands](#wifi-bands)
+  * [Targeted packet sniffing](#targeted-packet-sniffing)
+  * [Deauthentication attack](#deauthentication-attack)
 * [Gaining access (WEP/WPA/WPA2 cracking)](#gaining-access-wepwpawpa2-cracking)
+  * [WEP cracking](#wep-cracking)
 
 ## Lab setup
 * Install kali linux
@@ -16,7 +24,7 @@ Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.co
   2.	Gaining access
   3.	Post-connection attacks
 
-### MAC (Media Access Control) address
+### MAC (Media Access Control) address <a name="mac-address"></a>
 #### Features
   * Permanent
   * Unique
