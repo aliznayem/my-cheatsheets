@@ -1,4 +1,4 @@
-From [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
+Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
 
 ## Lab setup
 * Install kali linux
