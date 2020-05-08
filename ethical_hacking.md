@@ -1,4 +1,4 @@
----
+****
 
 ## Contents
 * [Lab setup](#lab-setup)
@@ -14,7 +14,7 @@
 * [Gaining access (WEP/WPA/WPA2 cracking)](#gaining-access-wepwpawpa2-cracking)
   * [WEP cracking](#wep-cracking)
 
----
+****
 
 ## Lab setup
 * Install kali linux
