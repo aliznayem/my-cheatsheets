@@ -172,6 +172,13 @@ Crack with following command.
 ```
 aircrack-ng filename.cap
 ```
+### WPA/WPA2 cracking
+#### WPS feature exploiting
+
+
+
+
+
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
 
