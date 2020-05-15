@@ -9,8 +9,9 @@
   * [WiFi bands](#wifi-bands)
   * [Targeted packet sniffing](#targeted-packet-sniffing)
   * [Deauthentication attack](#deauthentication-attack)
-* [Gaining access (WEP/WPA/WPA2 cracking)](#gaining-access-wepwpawpa2-cracking)
+* [Gaining access (WEP/WPA/WPA2 cracking)](#gaining-access)
   * [WEP cracking](#wep-cracking)
+  * [WPA/WPA2 cracking](#wepwpawpa2-cracking)
 
 ****
 
@@ -120,7 +121,7 @@ Where
 * NetworkMAC: Router MAC address
 * TargetMAC: Client MAC address
 
-## Gaining access (WEP/WPA/WPA2 cracking) <a name="gaining-access-wepwpawpa2-cracking"></a>
+## Gaining access (WEP/WPA/WPA2 cracking) <a name="gaining-access"></a>
 ### WEP cracking
 #### Features
 * Wired Equivalent Privacy
@@ -172,7 +173,7 @@ airodump-ng capturing may go on. Crack with following command.
 ```
 aircrack-ng filename.cap
 ```
-### WPA/WPA2 cracking
+### WPA/WPA2 cracking <a name="wepwpawpa2-cracking"></a>
 #### WPS feature exploiting
 ##### Requirements
 * WPS enabled
