@@ -320,17 +320,10 @@ set hstshijack.payloads *:/root/test.js
 * to execute in all pages
 
 Then follow bypassing HTTPS procedure.
+### Fake access point
+Using [hostapd-mana](https://github.com/sensepost/hostapd-mana)
+
+Edit hostapd.conf according to wiki and run `./hostapd hostapd.conf`
 
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
-
-
-
-
-
-
-
-
-
-
-
