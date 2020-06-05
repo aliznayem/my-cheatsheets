@@ -389,7 +389,7 @@ Then exploit.
 exploit
 ```
 ### Using nexpose
-A vulnerability management framework similiar to mitasploit. Download [here](https://www.rapid7.com/info/nexpose-community/thank-you/) 30 day trial.
+A vulnerability management framework similiar to mitasploit but more detailed. Download [here](https://www.rapid7.com/info/nexpose-community/thank-you/) 30 day trial.
 
 
 
