@@ -6,3 +6,6 @@
 `djangorestframework`
 
 `django-cors-headers`
+
+#### Create new Django project
+`django-admin startproject drfproj .`
